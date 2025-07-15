@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fef6ff;
+  color: #333;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #c97cc9;
+  margin-bottom: 2rem;
+}
+
+#malla {
+  display: flex;
+  flex-direction: row; /* años en fila horizontal */
+  gap: 2rem;
+  overflow-x: auto; /* scroll horizontal si hay muchos años */
+  padding-bottom: 10px;
+}
+
+.anio {
+  display: flex;
+  flex-direction: column; /* semestres verticales */
+  border: 2px solid #c97cc9;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 220px;
+}
+
+.anio > h2 {
+  margin-bottom: 1rem;
+  color: #a76fba;
+  text-align: center;
+}
+
+.semestre {
+  display: flex;
+  flex-direction: column; /* ramos verticales */
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.semestre > h3 {
+  color: #7a9ebb;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ramo {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #ffd6ec;
+  border: 2px solid #c97cc9;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  user-select: none;
+  text-align: center;
+  min-width: 180px;
+}
+
+.ramo:hover {
+  transform: scale(1.05);
+}
+
+.ramo.aprobado {
+  background-color: #b8e0ff;
+  border-color: #78b4d8;
+  color: #333;
+  text-decoration: line-through;
+  cursor: default;
+}
+
+.ramo.bloqueado {
+  background-color: #eee;
+  border-color: #ccc;
+  color: #aaa;
+  cursor: not-allowed;
+  pointer-events: none;
+}
